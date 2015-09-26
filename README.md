@@ -5,6 +5,8 @@
 每天kill一道，自己的感悟和源代码实现
 ####Contents
 
-[1.求两个数的最大公约数(欧几里德算法)](https://github.com/Jensenczx/AlgorithmSource/tree/master/(1)gcd)
+1. 求两个数的最大公约数(欧几里德算法)]
 
-[2.选择排序]()
+2. 选择排序
+
+3. 插入排序
