@@ -12,7 +12,6 @@ public class BoyerMoore{
 	}
 
 	//构造最右匹配数组
-
 	public int search(String txt){
 		int N = txt.length();
 		int M = pat.length();
