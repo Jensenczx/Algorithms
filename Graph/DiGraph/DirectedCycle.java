@@ -12,10 +12,14 @@ public class DirectedCycle{
 			if(!marked[v]) dfs(G,v);
 	}
 
+	public DirectedCycle(Digraph G){
+		onStack = new boolean[G.V()];
+	}
+
 	private void dfs(Digraph G,int v){
 		onStack[v] = true;
 		marked[v] = true;
-		for(int w: G.adj(v))
+		for(int w:G.adj(v))
 			if(this.hasCycle()) return;
 		else if(!marked[w]){
 			edgeTo[w] = v;
@@ -29,7 +33,7 @@ public class DirectedCycle{
 		}
 		onStack[v] = false;
 	}
-
+	
 	private boolean hasCycle(){
 		return cycle != null;
 	}

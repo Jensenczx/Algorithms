@@ -15,7 +15,7 @@ public class Cycle{
 				dfs(G,w,v);
 			else if(w!=u) hasCycle = true;
 	}
-
+	
 	public boolean hasCycle(){
 		return hasCycle;
 	}

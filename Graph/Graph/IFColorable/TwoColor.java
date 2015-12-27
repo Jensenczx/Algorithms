@@ -18,7 +18,7 @@ public class TwoColor{
 				dfs(G,w);
 			}else if(color[w]==color[w]) isTwoColorable = false;
 	}
-
+	
 	public boolean ifBipartite(){
 		return isTwoColorable;
 	}

@@ -16,7 +16,7 @@ public class BreadthFirstPaths{
 		queue.enqueue(s);
 		while(!queue.isEmpty()){
 			int v = queue.dequeue();
-			for(itn w: G.adj(v))
+			for(int w: G.adj(v))
 				if(!marked[w]){
 					edgeTo[w] = v;
 					marked[w] = true;
@@ -24,7 +24,6 @@ public class BreadthFirstPaths{
 				}
 		}
 	}
-
 	public boolean hasPathTo(int v){
 		return marked[v];
 	}
