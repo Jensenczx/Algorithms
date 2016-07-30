@@ -7,11 +7,14 @@ public class DepthFirstSearch(){
 		dfs(G,s);
 	}
 
-	private void dfs(Graph G,int v){
+	private void dfs(Graph G, int v){
 		marked[v] = true;
 		count++;
-		for(int w: G.adj(v))
-			if(!marked[w]) dfs(G,w);
+		for(int w : G.adj(v)) {
+			if(!marked[w]) {
+				dfs(G, w);
+			}
+		}
 	}
 
 	public boolean marked(int w){

@@ -5,7 +5,8 @@ public class PrimMST{
 	private IndexMinPQ<Double> pq;
 
 	public PrimMST(EdgeWeightedGraph G){
-		edgeTo = new Edge[G.V()];
+		//初始化边的数组，标记数组
+		edgeTo = new Edge[G.V();
 		distTo = new double[G.V()];
 		marked = new boolean[G.V()];
 		for(int v=0; v<G.V(); v++)

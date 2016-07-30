@@ -10,6 +10,15 @@ public class Solution{
 		merge(array,low,mid,high);
 	}
 
+	public static void mergeSortTop2Bottom (int[] array, int low, int high){
+		if (high <= low) 
+			return;
+		int mid = low + (high-low)/2;
+		mergeSortTop2Bottom(array, low, mid);
+		mergeSortTop2Bottom(array, mid+1, high);
+		merge(array, low, mid, high);
+	}
+
 	public static void mergeSortBottom2Top(int []array,int low,int high){
 		for(int size=1; size<high;size=2*size){
 			for(int i=0;i<high-size; i+=2*size){
@@ -17,7 +26,6 @@ public class Solution{
 			}
 		}
 	}
-
 	public static void merge(int []array,int low,int mid,int high){
 		for(int i=low; i<=high; i++)
 			transformArray[i]=array[i];

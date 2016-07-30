@@ -33,7 +33,20 @@ public class Solution{
 				k = tmp;
 			}else break;
 		}
+	}
 
+
+	public static void sink(int[]array,int k,int len){
+		while(2*k<=len){
+			int tmp;
+			if((2*k+1<=len)&&array[2*k]>array[2*k+1])
+				tmp = 2*k+1;
+			else tmp = 2*k;
+			if(array[k]>array[tmp]){
+				exch(array,k,tmp);
+				k = tmp;
+			}else break;
+		}
 	}
 
 	public static void main(String[] args){

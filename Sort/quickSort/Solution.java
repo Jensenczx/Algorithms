@@ -7,24 +7,19 @@ public class Solution{
 		quickSort(array,low,mid-1);
 		quickSort(array,mid+1,high);
 	}
-
+	
 	public static void quickThreeWaySort(int[] array,int low,int high){
 		if(high<=low)
 			return;
-		int start = low, end = high, cursor=low+1;
+		int start  = low,end = high, cursor = low+1;
+		int tmp = array[start];
 		while(cursor<=end){
-			int tmp = array[start];
-			if(array[cursor]>tmp){
-				exch(array,cursor,end--);
-			}else if(array[cursor]<tmp){
-				exch(array,cursor++,start++);
-			}else{
-				cursor++;
-			}
+			if(array[cursor]>tmp) exch(array,cursor,end--);
+			else if(array[cursor]<tmp) exch(array,cursor++,start++);
+			else cursor++;
 		}
 		quickThreeWaySort(array,low,start-1);
 		quickThreeWaySort(array,end+1,high);
-
 	}
 //Get the partition of the array,we can use circulate to simulate the process of the moving of
 	//the pointer,one is from the start to end ,another is from the end to the start.

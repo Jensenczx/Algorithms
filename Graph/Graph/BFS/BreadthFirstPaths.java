@@ -24,6 +24,13 @@ public class BreadthFirstPaths{
 				}
 		}
 	}
+
+	private void bfs(Graph G, int s) {
+		Queue<Integer> queue = new Queue();
+		marked[s] = true;
+		queue.enqueue(s);
+		while (!queue.isEmpty())
+	}
 	public boolean hasPathTo(int v){
 		return marked[v];
 	}

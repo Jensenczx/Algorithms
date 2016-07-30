@@ -10,8 +10,11 @@ public void collect(Node x,String pre,String pat,Queue<String> q){
 	if(d==pat.length&&x.val!=null) q.enqueue(pre);
 	if(d==pat.length)
 		return;
-	char next = pat.chatAt(d);
+	char next = pat.charAt(d);
 	for(char c=0; c<R; c++)
-		if(next='.'||next==c)
+		if(next=='.'||next==c)
 			collect(x.next[c],pre+c,pat,q);
 }
+
+
+/*模式匹配，根据跟定模式匹配串，*/

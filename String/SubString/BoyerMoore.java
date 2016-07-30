@@ -10,6 +10,7 @@ public class BoyerMoore{
 		for(int j=0; j<M; j++)
 			right[pat.charAt(c)] = j;
 	}
+	//将每一个字母的位置标记为-1，然后根据匹配串，将其更新为最大值
 
 	//构造最右匹配数组
 	public int search(String txt){
@@ -20,7 +21,7 @@ public class BoyerMoore{
 			skip = 0;
 			for(int j=M-1; j>=0; j--)
 				if(pat.charAt(j)!=txt.charAt(i+j)){
-					skip = j- right[txt.charAt(i+j)];
+					skip = j - right[txt.charAt(i+j)];
 					if(skip<1) skip = 1;
 					break;
 				}

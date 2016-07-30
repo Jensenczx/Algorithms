@@ -11,6 +11,7 @@ public static int search(String pat,String txt){
 	}
 	return N;
 }
+
 //显式回退
 public static int search(String pat,String txt){
 	int j,M = pat.length();

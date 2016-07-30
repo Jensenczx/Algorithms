@@ -10,3 +10,6 @@ private int search(Node x,String s,int d,int length){
 	char c = s.charAt(d);
 	return search(x.next[c],s,d+1,length);
 }
+
+
+

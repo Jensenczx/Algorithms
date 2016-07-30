@@ -1,20 +1,26 @@
 public class Graph{
+	//表示图中结点数目
 	private final int V;
+	//表示图中的边数
 	private int E;
+	//用来存放图的邻接表
 	private Bag<Integer>[] adj;
 
+
+//邻接表结构，数组中的每一个元素里有一个邻接表。
 	public Graph(int V){
 		this.V = V;
 		this.E = 0;
 		adj = (Bag<Integer>[])new Bag[V];
-		for(int v=0; v<V; v++)
+		for(int v = 0; v < V; v++)
 			adj[v] = new Bag<Integer>();
 	}
 
+//用来读取读取图信息，将边信息加入到图中，传入的数据是结点的编号
 	public Graph(In in){
 		this(in.readInt());
 		int E = in.readInt();
-		for(int i=0; i<E; i++){
+		for(int i = 0; i < E; i++){
 			int v = in.readInt();
 			int w = in.readInt();
 			addEdge(v,w);

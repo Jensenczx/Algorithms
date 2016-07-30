@@ -1,26 +1,24 @@
 public class InsertSort{
 
-	public static void sort(int[] array){
-		int length = array.length;
-		if(length>1){
-			for(int i=1; i<length; i++){
-				if(array[i]<array[i-1]){
-					int j=i-1;
-					int num = array[i];
-					for(; j>=0; j--){
-						if(num>=array[j])
-							break;
-						array[j+1]=array[j];
-					}
-					array[j+1]=num;
-				}
-			}
+	public static void exch (int[]nums, int num1, int num2){
+		int tmp = nums[num1];
+		nums[num1] = nums[num2];
+		nums[num2] = tmp;
+	}
 
+	public static void sort (int[] nums) {
+		if (nums == null || nums.length <= 1)
+			return;
+		int len = nums.length;
+		for (int i = 1; i < len; i++) {
+			for (int j = i; j >= 1 && nums[j] < nums[j-1]; j--) {
+				exch (nums, j , j-1);
+			}
 		}
 	}
 
 	public static void main(String[] args){
-		int [] array = {1,2,3,4,3,1,5};
+		int [] array = {9,2,3,4,3,1,5};
 		sort(array);
 		for(int i: array)
 			System.out.println(i);
